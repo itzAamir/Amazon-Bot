@@ -28,8 +28,8 @@ def check_price(url):
         final_price = "Product is Unvailable Right Now"
         print(final_price)
 
-    mail = Mailer(email='amirpc190320@gmail.com', password='Aamirkhan123')
-    mail.send(receiver='amirkhan190320@gmail.com', subject='Amazon Products Prices', message= f'Product Name: {final_product_title}\n\nProduct Price: {final_price}')
+    mail = Mailer(email= os.environ(emailID), password= os.environ(emailPass))
+    mail.send(receiver= os.environ(receiverEmail), subject='Amazon Products Prices', message= f'Product Name: {final_product_title}\n\nProduct Price: {final_price}')
 
 if __name__ == "__main__":
     while True:
