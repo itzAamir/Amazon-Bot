@@ -49,4 +49,4 @@ if __name__ == "__main__":
         #     url = r"https://www.amazon.in/dp/B086WN7BK6/ref=dp_prsubs_2"
         #     check_price(url)
     
-    print(time.localtime())
+    print(time.ctime())
