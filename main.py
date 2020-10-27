@@ -36,14 +36,15 @@ def check_price(url):
     mail.send(receiver= "amirkhan190320@gmail.com", subject='Amazon Products Prices', message= f'Product Name: {final_product_title}\n\nProduct Price: {final_price}\n\n {url}')
 
 if __name__ == "__main__":
-    # Below lines are for scheduling our script
-    hour = time.localtime().tm_hour
-    minutes = time.localtime().tm_min
-    seconds = time.localtime().tm_sec
-    if hour == 10 and minutes == 40 and seconds == 0:    
-        url = r"https://www.amazon.in/dp/B086WN7BK6/ref=dp_prsubs_2"
-        check_price(url)
-    
-    if hour == 10 and minutes == 41 and seconds == 0:    
-        url = r"https://www.amazon.in/dp/B086WN7BK6/ref=dp_prsubs_2"
-        check_price(url)
+    while True:
+        # Below lines are for scheduling our script
+        hour = time.localtime().tm_hour
+        minutes = time.localtime().tm_min
+        seconds = time.localtime().tm_sec
+        if hour == 10 and minutes == 43 and seconds == 0:    
+            url = r"https://www.amazon.in/dp/B086WN7BK6/ref=dp_prsubs_2"
+            check_price(url)
+        
+        if hour == 10 and minutes == 44 and seconds == 0:    
+            url = r"https://www.amazon.in/dp/B086WN7BK6/ref=dp_prsubs_2"
+            check_price(url)
